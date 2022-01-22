@@ -2,7 +2,9 @@
 /gen
 /out
 .idea/workspace.xml
-
+/build
+build
+.gradle
 *.iws
 *.iml
 *.ipr
