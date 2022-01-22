@@ -6,15 +6,14 @@
 
     <!-- This manifest is for the library project that has the authentication logic -->
 
-    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17"/>
-    <application
-            android:icon="@drawable/ic_udinic">
+    <application>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
 
         <!-- *** Not really needed here, but convenient for copying to other apps that will use this module *** -->
         <activity android:name=".authentication.AuthenticatorActivity" android:label="@string/login_label"/>
         <activity android:name=".authentication.SignUpActivity" android:label="@string/signup_title" />
 
-        <service android:name=".authentication.UdinicAuthenticatorService">
+        <service android:name=".authentication.UdinicAuthenticatorService" android:exported="true">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
